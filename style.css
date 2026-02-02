@@ -21,6 +21,180 @@ body.space {
 
 .planets {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 25%;
+	left: 25%;
+}
+/* Keyframe animatons for all the planets allowing them to orbit */
+@keyframes gyro {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin_my_planet {
+	0%{
+		transform: rotate(0deg) translateX(150px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(150px);
+	}
+}
+
+@keyframes spin_my_planet_venus {
+	0%{
+		transform: rotate(0deg) translateX(250px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(250px);
+	}
+}
+
+@keyframes spin_my_planet_earth {
+	0%{
+		transform: rotate(0deg) translateX(340px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(340px);
+	}
+}
+
+@keyframes spin_my_planet_mars {
+	0%{
+		transform: rotate(0deg) translateX(430px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(430px);
+	}
+}
+
+@keyframes spin_my_planet_jupiter {
+	0%{
+		transform: rotate(0deg) translateX(520px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(520px);
+	}
+}
+
+@keyframes spin_my_planet_saturn {
+	0%{
+		transform: rotate(0deg) translateX(610px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(610px);
+	}
+}
+
+@keyframes spin_my_uranus {
+	0%{
+		transform: rotate(0deg) translateX(700px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(701px);
+	}
+}
+
+@keyframes spin_my_sigma{
+	0%{
+		transform: rotate(0deg) translateX(810px);
+	}
+	100%{
+		transform: rotate(360deg) translateX(810px);
+	}
+}
+
+
+/* the size and location of the plantes to ensure they all have the correct orbit pattern */
+#sun {
+	height: 200px;
+	left: 250px;
+	top: 260px;
+}
+
+#mercury {
+	animation: spin_my_planet 2.4s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 10px;
+}
+
+#venus {
+	animation: spin_my_planet_venus 6.2s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 30px;
+}
+
+
+#earth {
+	animation: spin_my_planet_earth 10s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 35px;
+}
+
+#mars {
+	animation: spin_my_planet_mars 18.8s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 20px;
+}
+
+#jupiter {
+	animation: spin_my_planet_jupiter 119s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 60px;
+}
+
+#saturn {
+	animation: spin_my_planet_saturn 295s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 50px;
+}
+
+#uranus {
+	animation: spin_my_uranus 840.2s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 40px;
+}
+
+#neptune {
+	animation: spin_my_sigma 1648s infinite linear;
+	top: 350px;
+	left: 340px;
+	height: 40px;
+}
+
+#comet {
+	animation: comet 2s infinite linear;
+	position: absolute;
+	top: -150px;
+	right: 1180px;
+	width: 50px;
+	height: 50px;
+}
+/* animaton and code which sets project to height and location */
+@keyframes comet {
+	0%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(1200px);
+	}
+}
+
+
+.us {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	right: 1080px;
+	top: -150px;
+	animation: amoung 20s infinite linear;
 }
